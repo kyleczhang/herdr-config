@@ -28,11 +28,9 @@ rows = [
   [{ token = "branch", fg = "#8839ef" }, { token = "git_status", fg = "#d20f39", dim = true }],
 ]
 
-# Agent rows: add a line with the agent's live terminal title so you can see
-# what each agent is doing without focusing its pane.
+# Agent rows: state icon only (no text label) to keep the narrow sidebar tight.
 [ui.sidebar.agents]
 rows = [
-  ["state_icon", "workspace", "tab"],
-  ["terminal_title_stripped"],
+  ["state_icon", { token = "workspace", bold = true }, "tab"],
   ["agent"],
 ]
