@@ -4,6 +4,18 @@
 # Skip the first-run onboarding screen.
 onboarding = false
 
+[keys]
+# One modifier per sidebar area; number jumps and n/p cycling share it.
+#   tabs     prefix + (1..9 | n | p)          (defaults, plain)
+#   spaces   prefix + shift + (1..9 | n | p)
+#   agents   prefix + alt   + (1..9 | n | p)   (number jumps by top-to-bottom position)
+switch_workspace = "prefix+shift+1..9"
+next_workspace = "prefix+shift+n"
+previous_workspace = "prefix+shift+p"
+focus_agent = "prefix+alt+1..9"
+next_agent = "prefix+alt+n"
+previous_agent = "prefix+alt+p"
+
 [theme]
 name = "catppuccin-latte"
 
