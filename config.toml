@@ -1,0 +1,38 @@
+# ~/.config/herdr/config.toml
+# Only non-default values are listed. Full reference: `herdr --default-config`.
+
+# Skip the first-run onboarding screen.
+onboarding = false
+
+[theme]
+name = "catppuccin-latte"
+
+[ui]
+# Show detected agent labels in split-pane borders when no manual name is set.
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+# Route background agent notifications (blocked / done) to the terminal.
+delivery = "terminal"
+
+[ui.sound]
+# Stay silent on background agent state changes.
+enabled = false
+
+# --- Sidebar -----------------------------------------------------------------
+# Space rows, styled for the light catppuccin-latte palette.
+# Line 1: state icon + workspace name (bold).  Line 2: branch + git status.
+[ui.sidebar.spaces]
+rows = [
+  ["state_icon", { token = "workspace", bold = true }],
+  [{ token = "branch", fg = "#8839ef" }, { token = "git_status", fg = "#d20f39", dim = true }],
+]
+
+# Agent rows: add a line with the agent's live terminal title so you can see
+# what each agent is doing without focusing its pane.
+[ui.sidebar.agents]
+rows = [
+  ["state_icon", "workspace", "tab"],
+  ["terminal_title_stripped"],
+  ["agent"],
+]
