@@ -10,6 +10,10 @@ onboarding = false
 #   spaces   prefix + shift + (1..9 | n | p)
 #   agents   prefix + alt   + (1..9 | n | p)   (number jumps by top-to-bottom position)
 
+# Tabs
+rename_tab  = "prefix+r"                   # moved off prefix+shift+t; renamed constantly
+resize_mode = ""                           # unbound on purpose — never used, frees prefix+r
+
 # Spaces
 new_workspace      = "prefix+shift+c"      # create (parallels new_tab = prefix+c)
 switch_workspace   = "prefix+shift+1..9"   # jump to space N
@@ -45,7 +49,8 @@ rows = [
   [{ token = "branch", fg = "#8839ef" }, { token = "git_status", fg = "#d20f39", dim = true }],
 ]
 
-# Agent rows: state icon only (no text label) to keep the narrow sidebar tight.
+# Agent rows, same two-line shape as the space rows above.
+# Line 1: state icon + workspace name (bold) + tab.  Line 2: agent name.
 [ui.sidebar.agents]
 rows = [
   ["state_icon", { token = "workspace", bold = true }, "tab"],
