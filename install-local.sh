@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Install the Herdr config from this checkout: validate, back up the existing
-# config, copy it into place, and hot-reload a running server.
+# Install the Herdr config from this checkout: validate, copy it into place,
+# and hot-reload a running server.
 #
 #   ./install-local.sh
 #
@@ -24,12 +24,6 @@ if command -v herdr >/dev/null 2>&1; then
 fi
 
 mkdir -p "$(dirname "$dest")"
-
-if [ -f "$dest" ]; then
-  backup="$dest.backup.$(date +%Y%m%d%H%M%S)"
-  cp "$dest" "$backup"
-  echo "backed up existing config -> $backup"
-fi
 
 cp "$src" "$dest"
 echo "installed -> $dest"

@@ -27,7 +27,7 @@ The `[keys]` block is organized by sidebar area rather than by action, and that 
 
 Sidebar `rows` are arrays of lines; each line is an array of cells, where a cell is either a bare token string (`"state_icon"`, `"tab"`, `"agent"`) or an inline table adding style (`{ token = "branch", fg = "#8839ef" }`). Colors are hard-coded hex values matched to the `catppuccin-latte` theme set in `[theme]`, so changing the theme means revisiting them.
 
-**`install.sh` / `install-local.sh`** are the same pipeline (validate → back up existing config with a timestamp suffix → copy → reload a running server) differing only in source: `install.sh` curls `config.toml` from `main` on GitHub, `install-local.sh` uses the file next to the script. Keep the two in sync when changing install behavior. Validation and reload are both skipped when the `herdr` binary isn't on `PATH`, so the scripts work on a machine where Herdr isn't installed yet.
+**`install.sh` / `install-local.sh`** are the same pipeline (validate → copy → reload a running server) differing only in source: `install.sh` curls `config.toml` from `main` on GitHub, `install-local.sh` uses the file next to the script. Keep the two in sync when changing install behavior. Validation and reload are both skipped when the `herdr` binary isn't on `PATH`, so the scripts work on a machine where Herdr isn't installed yet.
 
 ## Commit messages
 
