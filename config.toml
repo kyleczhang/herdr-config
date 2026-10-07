@@ -29,6 +29,9 @@ previous_agent = "prefix+alt+p"
 name = "catppuccin-latte"
 
 [ui]
+# Fixed "herdr · " prefix lets the Alfred "herdr" workflow find and focus an existing herdr window.
+window_title = "herdr · {workspace}"
+
 # Show detected agent labels in split-pane borders when no manual name is set.
 show_agent_labels_on_pane_borders = true
 
