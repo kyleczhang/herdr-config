@@ -53,9 +53,9 @@ rows = [
 ]
 
 # Agent rows, same two-line shape as the space rows above.
-# Line 1: state icon + workspace name (bold) + tab.  Line 2: agent name.
+# Line 1: state icon + workspace name (bold) + tab.  Line 2: state text + agent name.
 [ui.sidebar.agents]
 rows = [
   ["state_icon", { token = "workspace", bold = true }, "tab"],
-  ["agent"],
+  ["state_text", "agent"],
 ]
